@@ -13,7 +13,7 @@ len_male = len([m for m in data['Sex'] if m == 'male'])
 len_female = len([f for f in data['Sex'] if f == 'female'])
 print("{} {}".format(len_male,len_female))
 
-# Pandas вариант
+# Pandas Alternative option
 sex_counts = data['Sex'].value_counts()
 print(sex_counts)
 
@@ -23,7 +23,7 @@ allPass = len(data)
 sur = np.count_nonzero(data["Survived"])
 print("{:.2f}".format(sur*100/allPass))
 
-# Pandas вариант
+# Pandas Alternative option
 surv_counts = data['Survived'].value_counts()
 surv_percent = 100.0 * surv_counts[1] / surv_counts.sum()
 print('{:.2f}'.format(surv_percent))
@@ -33,7 +33,7 @@ print('{:.2f}'.format(surv_percent))
 fClass = len(data["Pclass"].where(data["Pclass"] == 1).dropna())
 print("{:.2f}".format(fClass*100/allPass))
 
-# Pandas вариант
+# Pandas Alternative option
 fclass_counts = data["Pclass"].value_counts()
 fclass_percent = 100 * fclass_counts[1] / fclass_counts.sum()
 print('{:.2f}'.format(fclass_percent))
